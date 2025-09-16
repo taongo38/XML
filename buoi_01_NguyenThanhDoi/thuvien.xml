@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book id="B001" language="vi">
+        <title>Tôi Tài Giỏi, Bạn Cũng Thế!</title>
+        <author>Adam Khoo</author>
+        <year>2002</year>
+        <genre>Kỹ năng sống</genre>
+        <publisher>NXB Trẻ</publisher>
+    </book>
+
+    <book id="B002" language="vi">
+        <title>Truyện Kiều</title>
+        <author>Nguyễn Du</author>
+        <year>1820</year>
+        <genre>Văn học cổ điển</genre>
+        <publisher>NXB Văn Học</publisher>
+    </book>
+
+    <book id="B003" language="en">
+        <title>The Pragmatic Programmer</title>
+        <author>Andrew Hunt, David Thomas</author>
+        <year>1999</year>
+        <genre>Công nghệ</genre>
+        <publisher>Addison-Wesley</publisher>
+    </book>
+
+    <book id="B004" language="pt">
+        <title>O Alquimista</title>
+        <author>Paulo Coelho</author>
+        <year>1988</year>
+        <genre>Tiểu thuyết</genre>
+        <publisher>Rocco</publisher>
+    </book>
+
+    <book id="B005" language="en">
+        <title>Thinking, Fast and Slow</title>
+        <author>Daniel Kahneman</author>
+        <year>2011</year>
+        <genre>Tâm lý học</genre>
+        <publisher>Farrar, Straus and Giroux</publisher>
+    </book>
+</library>

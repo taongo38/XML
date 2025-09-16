@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders xmlns:order="http://company.com/order"
+        xmlns:prod="http://company.com/product"
+        xmlns:ship="http://company.com/shipping">
+
+    <order:order id="O101" customer="Nguyễn Văn A" date="2025-03-02" status="Delivered" payment="Credit Card">
+        <prod:item id="P101" quantity="2" price="5200000">
+            <prod:name>Điện thoại iPhone 15</prod:name>
+            <prod:brand>Apple</prod:brand>
+        </prod:item>
+        <prod:item id="P102" quantity="1" price="28000000">
+            <prod:name>Laptop MacBook Pro</prod:name>
+            <prod:brand>Apple</prod:brand>
+        </prod:item>
+        <ship:shipping method="Express" fee="200000" address="123 Lê Lợi, Hà Nội"/>
+    </order:order>
+    
+    <order:order id="O102" customer="Trần Thị B" date="2025-03-03" status="Pending" payment="Cash">
+        <prod:item id="P103" quantity="1" price="1600000">
+            <prod:name>Máy lọc không khí</prod:name>
+            <prod:brand>Sharp</prod:brand>
+        </prod:item>
+        <prod:item id="P104" quantity="2" price="850000">
+            <prod:name>Nồi chiên không dầu</prod:name>
+            <prod:brand>Philips</prod:brand>
+        </prod:item>
+        <ship:shipping method="Standard" fee="100000" address="45 Nguyễn Huệ, Đà Nẵng"/>
+    </order:order>
+
+    <order:order id="O103" customer="Lê Văn C" date="2025-03-04" status="Shipped" payment="E-Wallet">
+        <prod:item id="P105" quantity="1" price="12000000">
+            <prod:name>Smart TV 55 inch</prod:name>
+            <prod:brand>Samsung</prod:brand>
+        </prod:item>
+        <prod:item id="P106" quantity="4" price="450000">
+            <prod:name>Loa Bluetooth mini</prod:name>
+            <prod:brand>Sony</prod:brand>
+        </prod:item>
+        <ship:shipping method="Express" fee="250000" address="789 Trần Phú, TP.HCM"/>
+    </order:order>
+
+</orders>

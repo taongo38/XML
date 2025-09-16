@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elearning xmlns:course="http://example.com/course"
+           xmlns:instructor="http://example.com/instructor"
+           xmlns:student="http://example.com/student"
+           xmlns:module="http://example.com/module">
+
+    <course:course id="C101" category="Lập trình">
+        <course:title>Lập trình Java nâng cao</course:title>
+        <course:level>Intermediate</course:level>
+        <course:duration unit="weeks">10</course:duration>
+        <instructor:instructor id="I101">
+            <instructor:name>Nguyễn Văn A</instructor:name>
+            <instructor:email>vana@example.com</instructor:email>
+            <instructor:phone>+84-912345678</instructor:phone>
+        </instructor:instructor>
+        <course:modules>
+            <module:module code="M101">Java Core</module:module>
+            <module:module code="M102">Spring Framework</module:module>
+            <module:module code="M103">Microservices</module:module>
+        </course:modules>
+        <course:students>
+            <student:student id="S101" progress="95">
+                <student:name>Trần Thị B</student:name>
+                <student:email>tranb@example.com</student:email>
+                <student:grade>A</student:grade>
+            </student:student>
+            <student:student id="S102" progress="60">
+                <student:name>Hoàng Minh C</student:name>
+                <student:email>minhc@example.com</student:email>
+                <student:grade>C</student:grade>
+            </student:student>
+        </course:students>
+    </course:course>
+
+    <course:course id="C102" category="Thiết kế">
+        <course:title>UI/UX Design chuyên sâu</course:title>
+        <course:level>Beginner</course:level>
+        <course:duration unit="weeks">8</course:duration>
+        <instructor:instructor id="I102">
+            <instructor:name>Phạm Thị E</instructor:name>
+            <instructor:email>phamte@example.com</instructor:email>
+            <instructor:phone>+84-987654321</instructor:phone>
+        </instructor:instructor>
+        <course:modules>
+            <module:module code="M201">Nguyên lý thiết kế</module:module>
+            <module:module code="M202">Thiết kế giao diện</module:module>
+            <module:module code="M203">Trải nghiệm người dùng</module:module>
+        </course:modules>
+        <course:students>
+            <student:student id="S103" progress="80">
+                <student:name>Nguyễn Văn F</student:name>
+                <student:email>vanf@example.com</student:email>
+                <student:grade>B+</student:grade>
+            </student:student>
+            <student:student id="S104" progress="92">
+                <student:name>Trần Thị G</student:name>
+                <student:email>trang@example.com</student:email>
+                <student:grade>A</student:grade>
+            </student:student>
+        </course:students>
+    </course:course>
+
+    <course:course id="C103" category="Dữ liệu">
+        <course:title>Phân tích dữ liệu với SQL</course:title>
+        <course:level>Beginner</course:level>
+        <course:duration unit="weeks">6</course:duration>
+        <instructor:instructor id="I103">
+            <instructor:name>Lê Văn H</instructor:name>
+            <instructor:email>vanh@example.com</instructor:email>
+            <instructor:phone>+84-911223344</instructor:phone>
+        </instructor:instructor>
+        <course:modules>
+            <module:module code="M301">SQL cơ bản</module:module>
+            <module:module code="M302">Truy vấn nâng cao</module:module>
+            <module:module code="M303">Tối ưu hiệu suất</module:module>
+        </course:modules>
+        <course:students>
+            <student:student id="S105" progress="75">
+                <student:name>Nguyễn Thị I</student:name>
+                <student:email>thii@example.com</student:email>
+                <student:grade>B</student:grade>
+            </student:student>
+        </course:students>
+    </course:course>
+
+</elearning>

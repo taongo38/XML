@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company xmlns:hr="http://company.com/hr" 
+         xmlns:dep="http://company.com/department"
+         xmlns:proj="http://company.com/project">
+
+    <dep:department name="Kế toán" manager="Nguyễn Văn A">
+        <hr:employee id="E001">
+            <hr:name>Nguyễn Văn A</hr:name>
+            <hr:position>Kế toán trưởng</hr:position>
+            <hr:email>vana@company.com</hr:email>
+            <hr:salary currency="VND">20000000</hr:salary>
+        </hr:employee>
+        <hr:employee id="E002">
+            <hr:name>Trần Thị B</hr:name>
+            <hr:position>Kế toán viên</hr:position>
+            <hr:email>thib@company.com</hr:email>
+            <hr:salary currency="VND">12000000</hr:salary>
+        </hr:employee>
+    </dep:department>
+    
+    <dep:department name="IT" manager="Lê Văn C">
+        <hr:employee id="E003">
+            <hr:name>Lê Văn C</hr:name>
+            <hr:position>Trưởng phòng IT</hr:position>
+            <hr:email>vanc@company.com</hr:email>
+            <hr:salary currency="USD">2500</hr:salary>
+        </hr:employee>
+        <hr:employee id="E004">
+            <hr:name>Phạm Thị D</hr:name>
+            <hr:position>Lập trình viên</hr:position>
+            <hr:email>thid@company.com</hr:email>
+            <hr:salary currency="USD">1500</hr:salary>
+        </hr:employee>
+    </dep:department>
+
+    <dep:department name="Nhân sự" manager="Hoàng Văn E">
+        <hr:employee id="E005">
+            <hr:name>Hoàng Văn E</hr:name>
+            <hr:position>Trưởng phòng nhân sự</hr:position>
+            <hr:email>vane@company.com</hr:email>
+            <hr:salary currency="VND">18000000</hr:salary>
+        </hr:employee>
+        <hr:employee id="E006">
+            <hr:name>Ngô Thị F</hr:name>
+            <hr:position>Chuyên viên tuyển dụng</hr:position>
+            <hr:email>thif@company.com</hr:email>
+            <hr:salary currency="VND">10000000</hr:salary>
+        </hr:employee>
+    </dep:department>
+
+    <proj:projects>
+        <proj:project code="P001" name="Hệ thống ERP" lead="E003">
+            <proj:member ref="E004"/>
+            <proj:member ref="E002"/>
+        </proj:project>
+        <proj:project code="P002" name="Website công ty" lead="E004">
+            <proj:member ref="E003"/>
+        </proj:project>
+    </proj:projects>
+</company>
