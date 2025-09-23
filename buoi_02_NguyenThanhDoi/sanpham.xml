@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE danhmucsanpham [
+
+    <!ELEMENT danhmucsanpham (product+)>
+
+    <!ELEMENT product (name, price, brand, stock)>
+    <!ATTLIST product
+        id ID #REQUIRED
+        category CDATA #REQUIRED
+    >
+
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT price EMPTY>
+    <!ATTLIST price
+        value CDATA #REQUIRED
+        currency CDATA #REQUIRED
+    >
+
+    <!ELEMENT brand (#PCDATA)>
+    <!ELEMENT stock (#PCDATA)>
+]>
+<danhmucsanpham>
+    <product id="SP100" category="Điện tử">
+        <name>Điện thoại thông minh</name>
+        <price value="7500000" currency="VND"/>
+        <brand>Samsung</brand>
+        <stock>120</stock>
+    </product>
+
+    <product id="SP101" category="Thời trang">
+        <name>Áo thun nam</name>
+        <price value="320000" currency="VND"/>
+        <brand>Việt Tiến</brand>
+        <stock>85</stock>
+    </product>
+
+    <product id="SP102" category="Gia dụng">
+        <name>Nồi cơm điện</name>
+        <price value="65" currency="USD"/>
+        <brand>Panasonic</brand>
+        <stock>40</stock>
+    </product>
+
+    <product id="SP103" category="Thể thao">
+        <name>Giày chạy bộ</name>
+        <price value="1450000" currency="VND"/>
+        <brand>Nike</brand>
+        <stock>60</stock>
+    </product>
+
+    <product id="SP104" category="Sách">
+        <name>Lập trình Java cơ bản</name>
+        <price value="15" currency="USD"/>
+        <brand>NXB Giáo Dục</brand>
+        <stock>200</stock>
+    </product>
+</danhmucsanpham>

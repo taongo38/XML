@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hospital [
+    <!-- Gốc -->
+    <!ELEMENT hospital (department+, appointment+)>
+
+    <!-- Phòng ban -->
+    <!ELEMENT department (doctor+)>
+    <!ATTLIST department
+        id ID #REQUIRED
+        name CDATA #REQUIRED
+    >
+
+    <!-- Bác sĩ -->
+    <!ELEMENT doctor (docname, specialty, email?)>
+    <!ATTLIST doctor
+        id ID #REQUIRED
+    >
+    <!ELEMENT docname (#PCDATA)>
+    <!ELEMENT specialty (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+
+    <!-- Cuộc hẹn -->
+    <!ELEMENT appointment (patient, doctor)>
+    <!ATTLIST appointment
+        id ID #REQUIRED
+        date CDATA #REQUIRED
+        time CDATA #REQUIRED
+        room CDATA #REQUIRED
+        status CDATA #REQUIRED
+    >
+
+    <!-- Bệnh nhân -->
+    <!ELEMENT patient (patname, dob, gender, phone)>
+    <!ATTLIST patient
+        id ID #REQUIRED
+    >
+    <!ELEMENT patname (#PCDATA)>
+    <!ELEMENT dob (#PCDATA)>
+    <!ELEMENT gender (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+]>
+
+<hospital>
+    <department id="DEP01" name="Khoa Nội">
+        <doctor id="D001">
+            <docname>Trần Thị B</docname>
+            <specialty>Nội khoa</specialty>
+            <email>tranb@hospital.com</email>
+        </doctor>
+    </department>
+
+    <department id="DEP02" name="Khoa Ngoại">
+        <doctor id="D002">
+            <docname>Phạm Thị D</docname>
+            <specialty>Ngoại khoa</specialty>
+            <email>phamd@hospital.com</email>
+        </doctor>
+    </department>
+
+    <department id="DEP03" name="Khoa Tim mạch">
+        <doctor id="D003">
+            <docname>Nguyễn Văn F</docname>
+            <specialty>Tim mạch</specialty>
+            <email>vanf@hospital.com</email>
+        </doctor>
+    </department>
+
+    <appointment id="A101" date="2025-03-05" time="09:00" room="101" status="Hoàn thành">
+        <patient id="P001">
+            <patname>Nguyễn Văn A</patname>
+            <dob>1990-07-15</dob>
+            <gender>Nam</gender>
+            <phone>0901234567</phone>
+        </patient>
+        <doctor id="D001"/>
+    </appointment>
+    
+    <appointment id="A102" date="2025-03-06" time="14:00" room="202" status="Chờ khám">
+        <patient id="P002">
+            <patname>Lê Văn C</patname>
+            <dob>1985-12-20</dob>
+            <gender>Nam</gender>
+            <phone>0912345678</phone>
+        </patient>
+        <doctor id="D002"/>
+    </appointment>
+    
+    <appointment id="A103" date="2025-03-07" time="10:30" room="305" status="Chờ khám">
+        <patient id="P003">
+            <patname>Hoàng Thị E</patname>
+            <dob>1992-03-10</dob>
+            <gender>Nữ</gender>
+            <phone>0987654321</phone>
+        </patient>
+        <doctor id="D003"/>
+    </appointment>
+
+    <appointment id="A104" date="2025-03-08" time="16:00" room="210" status="Chờ khám">
+        <patient id="P004">
+            <patname>Phan Văn G</patname>
+            <dob>2000-01-25</dob>
+            <gender>Nam</gender>
+            <phone>0971122334</phone>
+        </patient>
+        <doctor id="D001"/>
+    </appointment>
+</hospital>

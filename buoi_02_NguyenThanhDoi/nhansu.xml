@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE company [
+
+    <!ELEMENT company (department+, projects)>
+    <!ELEMENT department (employee+)>
+    <!ATTLIST department
+        name CDATA #REQUIRED
+        manager CDATA #REQUIRED
+    >
+
+    <!ELEMENT employee (name, position, email, salary)>
+    <!ATTLIST employee
+        id ID #REQUIRED
+    >
+
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT position (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT salary (#PCDATA)>
+    <!ATTLIST salary
+        currency CDATA #REQUIRED
+    >
+
+    <!ELEMENT projects (project+)>
+    <!ELEMENT project (member*)>
+    <!ATTLIST project
+        code ID #REQUIRED
+        name CDATA #REQUIRED
+        lead IDREF #REQUIRED
+    >
+
+    <!ELEMENT member EMPTY>
+    <!ATTLIST member
+        ref IDREF #REQUIRED
+    >
+]>
+<company>
+    <department name="Kế toán" manager="Nguyễn Văn A">
+        <employee id="E001">
+            <name>Nguyễn Văn A</name>
+            <position>Kế toán trưởng</position>
+            <email>vana@company.com</email>
+            <salary currency="VND">20000000</salary>
+        </employee>
+        <employee id="E002">
+            <name>Trần Thị B</name>
+            <position>Kế toán viên</position>
+            <email>thib@company.com</email>
+            <salary currency="VND">12000000</salary>
+        </employee>
+    </department>
+    
+    <department name="IT" manager="Lê Văn C">
+        <employee id="E003">
+            <name>Lê Văn C</name>
+            <position>Trưởng phòng IT</position>
+            <email>vanc@company.com</email>
+            <salary currency="USD">2500</salary>
+        </employee>
+        <employee id="E004">
+            <name>Phạm Thị D</name>
+            <position>Lập trình viên</position>
+            <email>thid@company.com</email>
+            <salary currency="USD">1500</salary>
+        </employee>
+    </department>
+
+    <department name="Nhân sự" manager="Hoàng Văn E">
+        <employee id="E005">
+            <name>Hoàng Văn E</name>
+            <position>Trưởng phòng nhân sự</position>
+            <email>vane@company.com</email>
+            <salary currency="VND">18000000</salary>
+        </employee>
+        <employee id="E006">
+            <name>Ngô Thị F</name>
+            <position>Chuyên viên tuyển dụng</position>
+            <email>thif@company.com</email>
+            <salary currency="VND">10000000</salary>
+        </employee>
+    </department>
+
+    <projects>
+        <project code="P001" name="Hệ thống ERP" lead="E003">
+            <member ref="E004"/>
+            <member ref="E002"/>
+        </project>
+        <project code="P002" name="Website công ty" lead="E004">
+            <member ref="E003"/>
+        </project>
+    </projects>
+</company>

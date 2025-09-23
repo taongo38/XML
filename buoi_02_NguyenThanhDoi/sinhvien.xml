@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students [
+    <!ELEMENT students (student+)>
+
+    <!ELEMENT student (name, gender, year, major, subjects)>
+    <!ATTLIST student
+        id ID #REQUIRED
+    >
+
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT gender (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+    <!ELEMENT major (#PCDATA)>
+
+    <!ELEMENT subjects (subject+)>
+    <!ELEMENT subject (name, score)>
+
+    <!ELEMENT score (#PCDATA)>
+]>
+<students>
+    <student id="SV101">
+        <name>Nguyễn Văn A</name>
+        <gender>Nam</gender>
+        <year>2022</year>
+        <major>Công nghệ thông tin</major>
+        <subjects>
+            <subject>
+                <name>Toán cao cấp</name>
+                <score>8.5</score>
+            </subject>
+            <subject>
+                <name>Lập trình C++</name>
+                <score>9.2</score>
+            </subject>
+            <subject>
+                <name>Cơ sở dữ liệu</name>
+                <score>7.8</score>
+            </subject>
+        </subjects>
+    </student>
+
+    <student id="SV102">
+        <name>Trần Thị B</name>
+        <gender>Nữ</gender>
+        <year>2021</year>
+        <major>Kinh tế</major>
+        <subjects>
+            <subject>
+                <name>Kinh tế vi mô</name>
+                <score>8.0</score>
+            </subject>
+            <subject>
+                <name>Kinh tế vĩ mô</name>
+                <score>8.7</score>
+            </subject>
+            <subject>
+                <name>Marketing căn bản</name>
+                <score>7.9</score>
+            </subject>
+        </subjects>
+    </student>
+
+    <student id="SV103">
+        <name>Lê Văn C</name>
+        <gender>Nam</gender>
+        <year>2023</year>
+        <major>Cơ khí</major>
+        <subjects>
+            <subject>
+                <name>Cơ học lý thuyết</name>
+                <score>7.5</score>
+            </subject>
+            <subject>
+                <name>Sức bền vật liệu</name>
+                <score>8.3</score>
+            </subject>
+            <subject>
+                <name>Vẽ kỹ thuật</name>
+                <score>8.8</score>
+            </subject>
+        </subjects>
+    </student>
+</students>

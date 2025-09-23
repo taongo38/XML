@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orders [
+
+    <!ELEMENT orders (order+)>
+    <!ELEMENT order (product+, shipping)>
+    <!ATTLIST order
+        id ID #REQUIRED
+        customer CDATA #REQUIRED
+        date CDATA #REQUIRED
+        status CDATA #REQUIRED
+        payment CDATA #REQUIRED
+    >
+
+    <!ELEMENT product (name, quantity)>
+    <!ATTLIST product
+        id ID #REQUIRED
+    >
+
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT quantity (#PCDATA)>
+
+    <!ELEMENT shipping EMPTY>
+    <!ATTLIST shipping
+        method CDATA #REQUIRED
+        fee CDATA #REQUIRED
+        address CDATA #REQUIRED
+    >
+]>
+<orders>
+    <order id="O101" customer="Nguyễn Văn A" date="2025-03-02" status="Delivered" payment="Credit Card">
+        <product id="P101">
+            <name>Điện thoại iPhone 15</name>
+            <quantity>2</quantity>
+        </product>
+        <product id="P102">
+            <name>Laptop MacBook Pro</name>
+            <quantity>1</quantity>
+        </product>
+        <shipping method="Express" fee="200000" address="123 Lê Lợi, Hà Nội"/>
+    </order>
+
+    <order id="O102" customer="Trần Thị B" date="2025-03-03" status="Pending" payment="Cash">
+        <product id="P103">
+            <name>Máy lọc không khí</name>
+            <quantity>1</quantity>
+        </product>
+        <product id="P104">
+            <name>Nồi chiên không dầu</name>
+            <quantity>2</quantity>
+        </product>
+        <shipping method="Standard" fee="100000" address="45 Nguyễn Huệ, Đà Nẵng"/>
+    </order>
+
+    <order id="O103" customer="Lê Văn C" date="2025-03-04" status="Shipped" payment="E-Wallet">
+        <product id="P105">
+            <name>Smart TV 55 inch</name>
+            <quantity>1</quantity>
+        </product>
+        <product id="P106">
+            <name>Loa Bluetooth mini</name>
+            <quantity>4</quantity>
+        </product>
+        <shipping method="Express" fee="250000" address="789 Trần Phú, TP.HCM"/>
+    </order>
+</orders>
