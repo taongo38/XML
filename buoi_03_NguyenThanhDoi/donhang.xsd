@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+
+<!-- Root element -->
+<xs:element name="danhsach_donhang">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="sanpham" type="SanPhamType" maxOccurs="unbounded"/>
+            <xs:element name="order" type="OrderType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- Kiểu cho sản phẩm -->
+<xs:complexType name="SanPhamType">
+    <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="price" type="xs:decimal"/>
+        <xs:element name="stock" type="xs:integer"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+</xs:complexType>
+
+<!-- Kiểu cho order -->
+<xs:complexType name="OrderType">
+    <xs:sequence>
+        <xs:element name="customer" type="xs:string"/>
+        <xs:element name="date" type="xs:date"/>
+        <xs:element name="order_items">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="item" type="ItemType" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+</xs:complexType>
+
+<!-- Kiểu cho item trong order -->
+<xs:complexType name="ItemType">
+    <xs:attribute name="productRef" type="xs:IDREF" use="required"/>
+    <xs:attribute name="quantity" type="xs:positiveInteger" use="required"/>
+</xs:complexType>
+
+
+</xs:schema>
