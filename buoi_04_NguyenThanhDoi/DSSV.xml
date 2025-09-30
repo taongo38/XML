@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSSV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="DSSV.xsd">
+    <KHOA>
+        <MA>M01</MA>
+        <TEN>CNTT</TEN>
+    </KHOA>
+    <KHOA>
+        <MA>M02</MA>
+        <TEN>QLCN</TEN>
+    </KHOA>
+
+    <LOP>
+        <MA>KTPM</MA>
+        <TEN>Lop 1</TEN>
+        <MAKHOA>M01</MAKHOA>
+    </LOP>
+    <LOP>
+        <MA>KKKK</MA>
+        <TEN>Lop 2</TEN>
+        <MAKHOA>M02</MAKHOA>
+    </LOP>
+
+    <SINHVIEN>
+        <MSSV>SV01</MSSV>
+        <HOTEN>Nguyen Van A</HOTEN>
+        <EMAIL>a@example.com</EMAIL>
+        <DIACHI>Hanoi</DIACHI>
+        <SDT>0123456789</SDT>
+        <MALOP>KTPM</MALOP>
+    </SINHVIEN>
+    <SINHVIEN>
+        <MSSV>SV02</MSSV>
+        <HOTEN>Tran Thi B</HOTEN>
+        <EMAIL>b@example.com</EMAIL>
+        <DIACHI>HCM</DIACHI>
+        <SDT>0876543216</SDT>
+        <MALOP>KKKK</MALOP>
+    </SINHVIEN>
+
+    <!-- Enrollment: đăng ký học phần -->
+    <enrollment>
+        <studentRef>SV01</studentRef>
+        <course>Toan101</course>
+    </enrollment>
+    <enrollment>
+        <studentRef>SV01</studentRef>
+        <course>LapTrinhC</course>
+    </enrollment>
+    <enrollment>
+        <studentRef>SV02</studentRef>
+        <course>XSTK203</course>
+    </enrollment>
+</DSSV>
